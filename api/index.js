@@ -41,33 +41,23 @@ const server = http.createServer((req, res) => {
     });
   } else if (req.url.startsWith('/studyattack/start')) {
     
+  } else if (req.url.startsWith('/studyattack/detail')) {
+    
+    var userdatails = getuser("username");
+    if (!userdatails.isstudying) {
+      
+    }
+
+    res.end();
+
   } else if (req.url.startsWith('/studyattack/stop')) {
     
   } else {
-    connection.connect((err) => {
-      if (err) {
-        console.error('error connecting: ' + err.message);
-        res.end('エラー,' + err.message);
-        return;
-      }
+    
+    var userdatails = getuser("username");
+    res.end();
 
-      const sql = "SELECT * FROM data";
-
-      connection.query(sql, (err, results, fields) => {
-          if (err) {
-              console.error('error querying: ' + err.stack);
-              res.write('エラー,' + err.message);
-              return;
-          }
-
-          var userdatails = searchuser("username", results);
-          
-          connection.end();
-          res.end();
-      });
-  }
-
-});
+}});
 
 server.listen(3000, () => {
   console.log('Server running on port 3000');
@@ -80,4 +70,27 @@ function searchuser(targetuser, results) {
       return results[i];
     }
   }
+}
+
+function getuser(username) {
+  connection.connect((err) => {
+    if (err) {
+      console.error('error connecting: ' + err.message);
+      res.write('エラー,' + err.message);
+      return;
+    }
+
+    const sql = "SELECT * FROM data";
+
+    connection.query(sql, (err, results, fields) => {
+        if (err) {
+            console.error('error querying: ' + err.stack);
+            res.write('エラー,' + err.message);
+            return;
+        }
+        connection.end();
+
+        return searchuser(username, results);
+    });
+  })
 }
