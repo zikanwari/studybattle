@@ -11,8 +11,8 @@ const server = http.createServer((req, res) => {
 
   const connection = mysql.createConnection({
     host: '192.168.0.3',
-    user: username,
-    password: password,
+    user: 'studyattack',
+    password: '3s*oOm_4L*q0]d-h',
     database: 'studyattack'
   });
 
@@ -24,7 +24,7 @@ const server = http.createServer((req, res) => {
         return;
       }
 
-      const sql = "INSERT INTO data (user, study, studyweek, maxrank, train, isstudying) VALUES ('" + uername + "', 0, 0, null, " +  istrain + ", false);";
+      const sql = "INSERT INTO data (user, study, studyweek, maxrank, train, isstudying) VALUES ('" + queryObject.username + "', 0, 0, 0, " +  queryObject.istrain + ", 0);";
 
       connection.query(sql, (err, results, fields) => {
           if (err) {
@@ -42,19 +42,58 @@ const server = http.createServer((req, res) => {
   } else if (req.url.startsWith('/studyattack/start')) {
     
   } else if (req.url.startsWith('/studyattack/detail')) {
-    
-    var userdatails = getuser("username");
-    if (!userdatails.isstudying) {
-      
-    }
 
-    res.end();
+    connection.connect((err) => {
+      if (err) {
+        console.error('error connecting: ' + err.message);
+        res.end('エラー,' + err.message);
+        return;
+      }
+
+      const sql = "SELECT * FROM data";
+
+      connection.query(sql, (err, results, fields) => {
+          if (err) {
+              console.error('error querying: ' + err.stack);
+              res.write('エラー,' + err.message);
+              return;
+          }
+
+          var userdatails = searchuser(queryObject.username, results);
+          if (!userdatails.isstudying) {
+            res.write('year')
+          } else {
+            res.write('aaaaaaa')
+          }
+
+          connection.end();
+          res.end();
+      });
+    });
 
   } else if (req.url.startsWith('/studyattack/stop')) {
     
   } else {
     
-    var userdatails = getuser("username");
+    connection.connect((err) => {
+      if (err) {
+        console.error('error connecting: ' + err.message);
+        res.write('エラー,' + err.message);
+        return;
+      }
+  
+      const sql = "SELECT * FROM data";
+  
+      connection.query(sql, (err, results, fields) => {
+          if (err) {
+              console.error('error querying: ' + err.stack);
+              res.write('エラー,' + err.message);
+              return;
+          }
+          connection.end();
+      });
+    })
+    res.write('fight!')
     res.end();
 
 }});
@@ -70,27 +109,4 @@ function searchuser(targetuser, results) {
       return results[i];
     }
   }
-}
-
-function getuser(username) {
-  connection.connect((err) => {
-    if (err) {
-      console.error('error connecting: ' + err.message);
-      res.write('エラー,' + err.message);
-      return;
-    }
-
-    const sql = "SELECT * FROM data";
-
-    connection.query(sql, (err, results, fields) => {
-        if (err) {
-            console.error('error querying: ' + err.stack);
-            res.write('エラー,' + err.message);
-            return;
-        }
-        connection.end();
-
-        return searchuser(username, results);
-    });
-  })
 }
