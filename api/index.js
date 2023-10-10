@@ -11,8 +11,8 @@ const server = http.createServer((req, res) => {
 
   const connection = mysql.createConnection({
     host: '192.168.0.3',
-    user: 'studyattack',
-    password: '3s*oOm_4L*q0]d-h',
+    user: '',
+    password: '',
     database: 'studyattack'
   });
 
@@ -40,7 +40,28 @@ const server = http.createServer((req, res) => {
       });
     });
   } else if (req.url.startsWith('/studyattack/start')) {
-    
+    connection.connect((err) => {
+      if (err) {
+        console.error('error connecting: ' + err.message);
+        res.end('エラー,' + err.message);
+        return;
+      }
+
+      const sql = "UPDATE data SET isstudying = ?? WHERE user = ?;";
+
+      connection.query(sql, (err, results, fields) => {
+          if (err) {
+              console.error('error querying: ' + err.stack);
+              res.write('エラー,' + err.message);
+              return;
+          }
+
+          res.write('registered')
+
+          connection.end();
+          res.end();
+      });
+    });
   } else if (req.url.startsWith('/studyattack/detail')) {
 
     connection.connect((err) => {

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" type="text/css" href="files/footer.css">
+    <link rel="stylesheet" type="text/css" href="files/index.css">
+    <script src="time/index.js"></script>
+    <script src="other/index.js"></script>
+    <script src="todo/index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>時間割確認アプリ</title>
+</head>
+<body>
+    <main>
+        <div id="timetable">
+            <p>時間割情報を取得中…</p>
+        </div>
+    </main>
+    <footer>
+        <div id="time">
+            <img src="files/time.png" alt="menu_time">
+            <p>時間割</p>
+        </div>
+        <div id="todo">
+            <img src="files/todo.png" alt="menu_todo">
+            <p>リスト</p>
+        </div>
+        <div id="other">
+            <img src="files/other.png" alt="menu_other">
+            <p>その他</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+<script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js', { scope: '/' });
+    }
+</script>
