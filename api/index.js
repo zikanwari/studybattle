@@ -11,8 +11,8 @@ const server = http.createServer((req, res) => {
 
   const connection = mysql.createConnection({
     host: '192.168.0.3',
-    user: '',
-    password: '',
+    user: username,
+    password: password,
     database: 'studyattack'
   });
 
@@ -47,16 +47,17 @@ const server = http.createServer((req, res) => {
         return;
       }
 
-      const sql = "UPDATE data SET isstudying = ?? WHERE user = ?;";
+      const sql = "UPDATE data SET isstudying = ? WHERE user = ?;";
+      const params = [getnow(), queryObject.username];
 
-      connection.query(sql, (err, results, fields) => {
+      connection.query(sql, params, (err, results, fields) => {
           if (err) {
               console.error('error querying: ' + err.stack);
               res.write('エラー,' + err.message);
               return;
           }
 
-          res.write('registered')
+          res.write(getnow())
 
           connection.end();
           res.end();
@@ -81,11 +82,8 @@ const server = http.createServer((req, res) => {
           }
 
           var userdatails = searchuser(queryObject.username, results);
-          if (!userdatails.isstudying) {
-            res.write('year')
-          } else {
-            res.write('aaaaaaa')
-          }
+          console.log(userdatails.isstudying);
+          res.write(userdatails.isstudying + "," + userdatails.study + "," + userdatails.studyweek + "," + userdatails.maxrank)
 
           connection.end();
           res.end();
@@ -93,7 +91,29 @@ const server = http.createServer((req, res) => {
     });
 
   } else if (req.url.startsWith('/studyattack/stop')) {
-    
+    connection.connect((err) => {
+      if (err) {
+        console.error('error connecting: ' + err.message);
+        res.end('エラー,' + err.message);
+        return;
+      }
+
+      const sql = "UPDATE data SET isstudying = '0000-00-00 00:00:00', studyweek = studyweek + ?, study = study + ? WHERE user = ?;";
+      const params = [queryObject.score, queryObject.score, queryObject.username];
+
+      connection.query(sql, params, (err, results, fields) => {
+          if (err) {
+              console.error('error querying: ' + err.stack);
+              res.write('エラー,' + err.message);
+              return;
+          }
+
+          res.write(getnow())
+
+          connection.end();
+          res.end();
+      });
+    });
   } else {
     
     connection.connect((err) => {
@@ -130,4 +150,17 @@ function searchuser(targetuser, results) {
       return results[i];
     }
   }
+}
+
+function getnow() {
+  const currentDate = new Date();
+
+  const year = currentDate.getFullYear();
+  const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+  const day = String(currentDate.getDate()).padStart(2, '0');
+  const hours = String(currentDate.getHours()).padStart(2, '0');
+  const minutes = String(currentDate.getMinutes()).padStart(2, '0');
+  const seconds = String(currentDate.getSeconds()).padStart(2, '0');
+
+  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 }
