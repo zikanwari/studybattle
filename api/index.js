@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
     database: 'studyattack'
   });
 
-  if (req.url.startsWith('/studyattack/register')) {
+  if (req.url.startsWith('/studybattle/register')) {
     connection.connect((err) => {
       if (err) {
         console.error('error connecting: ' + err.message);
@@ -39,7 +39,7 @@ const server = http.createServer((req, res) => {
           res.end();
       });
     });
-  } else if (req.url.startsWith('/studyattack/start')) {
+  } else if (req.url.startsWith('/studybattle/start')) {
     connection.connect((err) => {
       if (err) {
         console.error('error connecting: ' + err.message);
@@ -63,7 +63,7 @@ const server = http.createServer((req, res) => {
           res.end();
       });
     });
-  } else if (req.url.startsWith('/studyattack/detail')) {
+  } else if (req.url.startsWith('/studybattle/detail')) {
 
     connection.connect((err) => {
       if (err) {
@@ -90,7 +90,7 @@ const server = http.createServer((req, res) => {
       });
     });
 
-  } else if (req.url.startsWith('/studyattack/stop')) {
+  } else if (req.url.startsWith('/studybattle/stop')) {
     connection.connect((err) => {
       if (err) {
         console.error('error connecting: ' + err.message);

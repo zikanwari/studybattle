@@ -1,45 +1,9 @@
 var username = localStorage.getItem('user');
-var password = localStorage.getItem('pass');
-
-function syncdata() {
-  update();
-
-    const customSelects = document.querySelectorAll(".custom-select");
-
-    customSelects.forEach((customSelect, index) => {
-      const select = customSelect.querySelector("select");
-
-      select.addEventListener("change", function() {
-        var username = localStorage.getItem('user');
-        var password = localStorage.getItem('pass');
-        customSelect.classList.add("selected");
-        
-        fetch('https://api.launchpencil.f5.si/zikanwari/change/?user=' + username + '&pass=' + password + '&id=' + index + '&subject=' + this.value, {
-          mode: 'cors'
-        })
-        .then(response => response.text())
-        .then(data => {
-                alert(data);
-                update();
-        })
-        .catch(error => {
-            alert('時間割のデータ更新に失敗しました。');
-            update();
-        });
-
-      });
-
-      customSelect.addEventListener("click", function() {
-        this.classList.toggle("open");
-      });
-    });
-}
+var istrain = localStorage.getItem('istrain');
 
 function update() {
-  var username = localStorage.getItem('user');
-  var password = localStorage.getItem('pass');
 
-  fetch(`https://api.launchpencil.f5.si/zikanwari/?user=` + username + `&pass=` + password, {
+  fetch(`https://api.launchpencil.f5.si/studybattle/detail/?user=` + username, {
     mode: 'cors'
   })
   .then(response => response.text())
@@ -48,29 +12,15 @@ function update() {
           if (a[0] == "エラー") {
               if (a[1].startsWith("Access denied for user") || a[1].endsWith("doesn't exist")) {
                   document.getElementById('timetable').innerText = 
-                      '認証に失敗しました。ユーザー名またはパスワードが間違っているか設定されていません。';
-                      setTimeout(function() {
-                        if (confirm('ユーザー名またはパスワードが間違っているか設定されていません。\nOKを押すと設定画面へ移動します。')) {
-                          changeother();
-                        }
-                      }, 100);
+                      '認証に失敗しました。ユーザー名が設定されていません。';
                       return;
               }
-              document.getElementById('timetable').innerText = '時間割のデータ取得に失敗しました。\n エラーメッセージ：' + a[1];
+              document.getElementById('timetable').innerText = '学習時間の取得に失敗しました。\n エラーメッセージ：' + a[1];
               return;
           }
           a.pop();
-          for (let index = 0; index < a.length; index++) {
-            switch (a[index]) {
-              case '数学Ⅰ・Ⅱ':
-                document.getElementById(index).innerText = '数学\nⅠ・Ⅱ'
-                break;
-            
-              default:
-                document.getElementById(index).innerText = a[index];
-                break;
-            }
-            document.getElementById('s_' + index).value = a[index];
+          if (a[0] == '0000-00-00 00:00:00') {
+            document
           }
   })
   .catch(error => {
