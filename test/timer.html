@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>タイマーカウントアップ</title>
+</head>
+<body>
+    <div id="timer"></div>
+
+    <script>
+        // 開始時刻を "yyyy-MM-dd hh:mm:ss" 形式の文字列として設定
+        const startTimeString = "2023-9-13 12:29:00";
+
+        // 開始時刻の文字列を Date オブジェクトに変換
+        const startTime = new Date(startTimeString.replace(/-/g, '/'));
+
+        // タイマーを更新する関数
+        function updateTimer() {
+            // 現在の時刻を取得
+            const currentTime = new Date();
+
+            // 開始時刻からの経過時間を計算
+            const elapsedTime = new Date(currentTime - startTime);
+
+            // 分と秒を取得
+            const totalSeconds = Math.floor(elapsedTime / 1000);
+            const minutes = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
+            const seconds = (totalSeconds % 60).toString().padStart(2, '0');
+
+            // タイマーの表示形式を設定（例：mm:ss）
+            document.getElementById('timer').innerHTML = `${minutes}:${seconds}`;
+        }
+
+        // 1秒ごとにタイマーを更新
+        setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
