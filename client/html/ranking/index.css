@@ -26,11 +26,11 @@ main {
     }
 
     .table>div>div:nth-child(odd) {
-        background-color: #495e88; /* 暗めの青 */
+        background-color: #ceb78c; /* 暗めの青 */
     }
     
     .table>div>div:nth-child(even) {
-        background-color: #354564; /* 暗めの青 */
+        background-color: #c2cada; /* 暗めの青 */
     }
     
     span {
