@@ -1,16 +1,30 @@
-<link rel="stylesheet" type="text/css" href="timer/index.css">
-<div class="table">
-    <div id="addtask">
-        <div>
-            <span id="togle">新しいタスクの追加</span>
-            <div id="form">
-                <br>
-                <label for="name">タスク名:</label>
-                <input type="text" id="name" name="name"><br><br>
-                <label for="date">期限:</label>
-                <input type="date" id="date" name="date"><br><br>
-                <div id="settask">追加する</div>
-            </div>
-        </div>
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" type="text/css" href="timer/index.css">
+    <script src="timer/index.js"></script>
+    <script src="other/index.js"></script>
+    <script src="ranking/index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>study battle</title> 
+</head>
+    <main> 
+        <div class="square"></div>
+    </main>
+<body>
+    <footer>
+     
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+<script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js', { scope: '/' });
+    }
+</script>
