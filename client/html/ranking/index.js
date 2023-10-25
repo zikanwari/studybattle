@@ -3,7 +3,7 @@ var istrain = localStorage.getItem('istrain');
 
 function update() {
 
-  fetch(`https://api.launchpencil.f5.si/studybattle/detail/?user=` + username, {
+  /*fetch(`https://api.launchpencil.f5.si/studybattle/detail/?user=` + username, {
     mode: 'cors'
   })
   .then(response => response.text())
@@ -25,5 +25,8 @@ function update() {
   })
   .catch(error => {
       document.getElementById('timetable').innerText = '時間割のデータ取得に失敗しました。';
-  });
+  });*/
+}
+function syncdata() {
+  console.log('aaa');
 }
