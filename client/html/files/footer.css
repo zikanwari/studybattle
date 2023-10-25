@@ -31,6 +31,7 @@ footer {
 }
 
 .circle {
+    margin: 1vh auto 0;
     width: 22vw;
     height: 14vw;
     background-color: #82afa1;
