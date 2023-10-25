@@ -11,8 +11,8 @@ function changetime() {
 }
 
 function changeother() {
-    document.getElementById("time").classList.remove("select");
-    document.getElementById("todo").classList.remove("select");
+    document.getElementById("timer").classList.remove("select");
+    document.getElementById("ranking").classList.remove("select");
     document.getElementById("other").classList.add("select");
     fetch(`other/index.html`)
     .then(response => response.text())
@@ -23,9 +23,9 @@ function changeother() {
 }
 
 function changetodo() {
-    document.getElementById("time").classList.remove("select");
+    document.getElementById("timer").classList.remove("select");
     document.getElementById("other").classList.remove("select");
-    document.getElementById("todo").classList.add("select");
+    document.getElementById("ranking").classList.add("select");
     fetch(`ranking/index.html`)
     .then(response => response.text())
     .then(data => {
@@ -46,7 +46,7 @@ document.getElementById("ranking").onclick = function() {
 
 document.getElementById("timer").onclick = function() {
     document.getElementById("other").classList.remove("select");
-    document.getElementById("todo").classList.remove("select");
+    document.getElementById("ranking").classList.remove("select");
     changetime();
     console.log('timer');
 }
