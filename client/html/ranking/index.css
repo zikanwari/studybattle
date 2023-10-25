@@ -1,53 +1,47 @@
-main {
-    overflow: auto;
+.square week {
+    width: 100px; 
+    height: 100px; 
+    background-color: #52a577; 
+  }
+  .square total{
+    width: 100px; 
+    height: 100px; 
+    background-color: #52a577; 
+  }
+
+.circle1 {
+    width: 50%; /* 丸のサイズ */
+    padding-bottom: 50%; /* 高さ */
+    background-color: #52a577; 
+    border-radius: 50%; /* 50%のborder-radiusを指定して丸を作成 */
 }
-.table {
-    border-collapse: separate;
-    border-spacing: 10px;
-    display: table;
-    width: 100%;
-    }
-    
-    .table>div {
-    display: table-row;
-    background-color: #82d2bc; 
-    }
-    
-    .table>div>div {
-        display: table-cell;
-        width: 20vw;
-        height: 8vh;
-        text-align: center;
-        vertical-align: middle;
-        border-radius: 10px;
+.circle2{
+    width: 50%; 
+    padding-bottom: 50%; 
+    background-color: #52a577; 
+    border-radius: 50%; 
+}
+.circle3{
+    width: 50%; 
+    padding-bottom: 50%;
+    background-color: #52a577; 
+    border-radius: 50%; 
+}
+.circle4{
+    width: 50%; 
+    padding-bottom: 50%; 
+    background-color: #52a577; 
+    border-radius: 50%; 
+}
+.circle5 {
+    width: 50%; 
+    padding-bottom: 50%; 
+    background-color: #52a577; 
+    border-radius: 50%; 
+}
 
-        position: relative;
-        overflow: hidden;
-    }
-
-    .table>div>div:nth-child(odd) {
-        background-color: #ceb78c; /* 暗めの青 */
-    }
-    
-    .table>div>div:nth-child(even) {
-        background-color: #c2cada; /* 暗めの青 */
-    }
-    
-    span {
-    line-height: 1em;
-    }
-    
-    @media (max-width: 767px) {
-    .table>div>div {
-    font-size: 0.8em;
-    }
-    }
-
-    select {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-      }
+.rectangle {
+    width: 50%; /* 長方形の幅を設定（画面幅の50%になります） */
+    padding-bottom: 25%; /* 高さを設定（幅の1/2にすることで長方形になります） */
+    background-color: #f0f3f5; /* 長方形の背景色を指定 */
+}
