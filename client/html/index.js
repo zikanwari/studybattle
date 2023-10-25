@@ -1,8 +1,8 @@
 changetime();
 
 function changetime() {
-    document.getElementById("time").classList.add("select");
-    fetch(`time/index.html`)
+    document.getElementById("timer").classList.add("select");
+    fetch(`timer/index.html`)
     .then(response => response.text())
     .then(data => {
         document.getElementById('timetable').innerHTML = data;
@@ -26,7 +26,7 @@ function changetodo() {
     document.getElementById("time").classList.remove("select");
     document.getElementById("other").classList.remove("select");
     document.getElementById("todo").classList.add("select");
-    fetch(`todo/index.html`)
+    fetch(`ranking/index.html`)
     .then(response => response.text())
     .then(data => {
         document.getElementById('timetable').innerHTML = data;
@@ -36,14 +36,17 @@ function changetodo() {
 
 document.getElementById("other").onclick = function() {
     changeother();
+    console.log('other');
 }
 
-document.getElementById("todo").onclick = function() {
+document.getElementById("ranking").onclick = function() {
     changetodo();
+    console.log('todo');
 }
 
-document.getElementById("time").onclick = function() {
+document.getElementById("timer").onclick = function() {
     document.getElementById("other").classList.remove("select");
     document.getElementById("todo").classList.remove("select");
     changetime();
+    console.log('timer');
 }
