@@ -1,15 +1,100 @@
 
-.square  {
-    width: 100px; 
-    height: 100px; 
-    background-color: #4d8067e0; 
-  }
-  #squareText {
-    color: rgb(216, 216, 216);
-    font-size: 3.5vw;
-    text-align: center;
-    margin-top: 10px;
-  }
-  
+.circle {
+  margin-top: -240px;
+  width: 18vw;
+  height: 12vw;
+  background-color: #82afa1;
+  border-radius: 50%; 
+  margin-left: 75vw; 
+  transform: translate(-50%, -50%);
+}
+#circleText {
+  color: rgb(216, 216, 216);
+  font-size: 3.5vw;
+  margin-top: 15px;
+}
 
-  
+  /*家*/
+.square1  {
+  width: 32vw; 
+  height: 12vw; 
+  background-color: #4d8067e0; 
+  border-radius: 10px; /* 角を丸める */
+  position: absolute;
+  top: 50%; /* 上端を画面の中央に配置 */
+  left: 50%; /* 左端を画面の中央に配置 */
+  transform: translate(-105%, -300%); /* 中央に配置 */
+}
+.square1 p {
+  color: rgb(216, 216, 216);
+  font-size: 7.5vw;
+  text-align: center;
+}
+
+  /*通学中*/
+.square2  {
+  width: 32vw;
+  height: 12vw; 
+  background-color: #4d8067e0; 
+  border-radius: 10px; /* 角を丸める */
+  position: absolute;
+  top: 50%; /* 上端を画面の中央に配置 */
+  left: 50%; /* 左端を画面の中央に配置 */
+  transform: translate(-4%, -300%); /* 中央に配置 */
+}
+.square2 p {
+  color: rgb(216, 216, 216);
+  font-size: 7.5vw;
+  text-align: center;
+}
+
+
+
+  /*スタート*/
+.square3  {
+  width: 32vw; 
+  height: 16vw; 
+  background-color: #4d8067e0; 
+  border-radius: 10px; /* 角を丸める */
+  position: absolute;
+  top: 50%; /* 上端を画面の中央に配置 */
+  left: 50%; /* 左端を画面の中央に配置 */
+  transform: translate(-105%, 20%); /* 中央に配置 */
+}
+.square3 p {
+  color: rgb(216, 216, 216);
+  font-size: 6.0vw;
+  text-align: center;
+  margin: 10px;
+}
+
+  /*ストップ*/
+.square4  {
+  width: 32vw; 
+  height: 16vw; 
+  background-color: #4d8067e0; 
+  border-radius: 10px; /* 角を丸める */
+  position: absolute;
+  top: 50%; /* 上端を画面の中央に配置 */
+  left: 50%; /* 左端を画面の中央に配置 */
+  transform: translate(-4%, 20%); /* 中央に配置 */
+}
+.square4 p {
+  color: rgb(216, 216, 216);
+  font-size: 6.0vw;
+  text-align: center;
+  margin: 10px;
+}
+
+.square5 {
+  width: 80vw; 
+  height: 20vw; 
+  background-color: #4d8067e0;
+  margin-top: -15vw; 
+  position: absolute;
+  top: 50%; /* 上端を画面の中央に配置 */
+  left: 50%; /* 左端を画面の中央に配置 */
+  transform: translate(-50%, -50%); /* 中央に配置 */
+  border-radius: 0; 
+}
+
