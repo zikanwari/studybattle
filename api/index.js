@@ -84,7 +84,7 @@ const server = http.createServer((req, res) => {
           var userdatails = searchuser(queryObject.username, results);
           if (userdatails == 'user not found') {
             console.log('not found:' + username);
-            res.write('user not found')
+            res.write('error,user not found')
           } else {
             console.log(userdatails.isstudying);
             res.write(userdatails.isstudying + "," + userdatails.study + "," + userdatails.studyweek + "," + userdatails.maxrank)

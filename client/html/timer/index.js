@@ -1,10 +1,9 @@
 var username = localStorage.getItem('user');
-var password = localStorage.getItem('pass');
+var istrain = localStorage.getItem('istrain');
 
+function update() {
 
-function taskupdate() {
-
-  fetch(`https://api.launchpencil.f5.si/studybattle/detail?username=` + username, {
+  /*fetch(`https://api.launchpencil.f5.si/studybattle/detail/?user=` + username, {
     mode: 'cors'
   })
   .then(response => response.text())
@@ -13,27 +12,42 @@ function taskupdate() {
           if (a[0] == "エラー") {
               if (a[1].startsWith("Access denied for user") || a[1].endsWith("doesn't exist")) {
                   document.getElementById('timetable').innerText = 
-                      '認証に失敗しました。ユーザー名またはパスワードが間違っているか設定されていません。';
-                      setTimeout(function() {
-                        if (confirm('ユーザー名またはパスワードが間違っているか設定されていません。\nOKを押すと設定画面へ移動します。')) {
-                          changeother();
-                        }
-                      }, 100);
+                      '認証に失敗しました。ユーザー名が設定されていません。';
                       return;
               }
-              document.getElementById('timetable').innerText = 'タスクのデータ取得に失敗しました。\n エラーメッセージ：' + a[1];
+              document.getElementById('timetable').innerText = '学習時間の取得に失敗しました。\n エラーメッセージ：' + a[1];
               return;
           }
           a.pop();
-          for (let index = 0; index < a.length; index++) {
-            var newElement = document.createElement("div");
-            newElement.innerHTML = '<div>' + a[index] + '</div>';
-            
-            document.getElementsByClassName("table")[0].appendChild(newElement);
+          if (a[0] == '0000-00-00 00:00:00') {
+            document
           }
   })
   .catch(error => {
-      document.getElementById('timetable').innerText = 'タスクのデータ取得に失敗しました。';
+      document.getElementById('timetable').innerText = '時間割のデータ取得に失敗しました。';
+  });*/
+}
+
+function syncdata() {
+
+  fetch(`https://api.launchpencil.f5.si/studybattle/detail?username=` + username, {
+    //mode: 'cors'
+  })
+  .then(response => response.text())
+  .then(data => {
+          a = data.split(',');
+          if (a[0] == "error") {
+              if (a[1] == "user not found") {
+                console.log('user not found');
+              }
+              document.getElementById('time').innerText = 'error';
+              return;
+          }
+          a.pop();
+          document.getElementById('time').innerText = 'time';
+  })
+  .catch(error => {
+      document.getElementById('time').innerText = 'タスクのデータ取得に失敗しました。';
+      console.log(error);
   });
-  */
 }
