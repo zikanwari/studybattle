@@ -3,11 +3,8 @@ var password = localStorage.getItem('pass');
 
 
 function taskupdate() {
-  /*
-  var username = localStorage.getItem('user');
-  var password = localStorage.getItem('pass');
 
-  fetch(`https://api.launchpencil.f5.si/todo/?user=` + username + '&pass=' + password, {
+  fetch(`https://api.launchpencil.f5.si/studybattle/detail?username=` + username, {
     mode: 'cors'
   })
   .then(response => response.text())

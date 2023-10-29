@@ -82,8 +82,13 @@ const server = http.createServer((req, res) => {
           }
 
           var userdatails = searchuser(queryObject.username, results);
-          console.log(userdatails.isstudying);
-          res.write(userdatails.isstudying + "," + userdatails.study + "," + userdatails.studyweek + "," + userdatails.maxrank)
+          if (userdatails == 'user not found') {
+            console.log('not found:' + username);
+            res.write('user not found')
+          } else {
+            console.log(userdatails.isstudying);
+            res.write(userdatails.isstudying + "," + userdatails.study + "," + userdatails.studyweek + "," + userdatails.maxrank)
+          }
 
           connection.end();
           res.end();
@@ -150,6 +155,7 @@ function searchuser(targetuser, results) {
       return results[i];
     }
   }
+  return 'user not found';
 }
 
 function getnow() {
