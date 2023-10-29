@@ -1,36 +1,9 @@
 var username = localStorage.getItem('user');
 var password = localStorage.getItem('pass');
 
-function startmoni_todo() {
-  var username = localStorage.getItem('user');
-  var password = localStorage.getItem('pass');
-  taskupdate();
-
-  document.getElementById('settask').addEventListener('click',() => {
-
-    fetch('https://api.launchpencil.f5.si/todo/add/?user=' + username + '&pass=' + password + '&name=' + document.getElementById("name").value + '&date=' + document.getElementById("date").value, {
-      mode: 'cors'
-    })
-        .then(response => response.text())
-        .then(data => {
-                alert(data);
-                changetodo();
-        })
-        .catch(error => {
-            alert('タスクのデータ更新に失敗しました。');
-            taskupdate();
-        });
-  });
-
-  document.querySelectorAll('#togle, #settask').forEach(function(element) {
-    element.addEventListener('click', function() {
-      document.getElementById('form').classList.toggle("show");
-    });
-  });
-}
-
 
 function taskupdate() {
+  /*
   var username = localStorage.getItem('user');
   var password = localStorage.getItem('pass');
 
@@ -65,4 +38,5 @@ function taskupdate() {
   .catch(error => {
       document.getElementById('timetable').innerText = 'タスクのデータ取得に失敗しました。';
   });
+  */
 }
