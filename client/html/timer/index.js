@@ -1,34 +1,54 @@
 var username = localStorage.getItem('user');
 var istrain = localStorage.getItem('istrain');
 
-function update() {
+const timerInterval = setInterval(whiledata, 1000);
 
-  /*fetch(`https://api.launchpencil.f5.si/studybattle/detail/?user=` + username, {
-    mode: 'cors'
-  })
-  .then(response => response.text())
-  .then(data => {
-          a = data.split(',');
-          if (a[0] == "エラー") {
-              if (a[1].startsWith("Access denied for user") || a[1].endsWith("doesn't exist")) {
-                  document.getElementById('timetable').innerText = 
-                      '認証に失敗しました。ユーザー名が設定されていません。';
-                      return;
-              }
-              document.getElementById('timetable').innerText = '学習時間の取得に失敗しました。\n エラーメッセージ：' + a[1];
-              return;
-          }
-          a.pop();
-          if (a[0] == '0000-00-00 00:00:00') {
-            document
-          }
-  })
-  .catch(error => {
-      document.getElementById('timetable').innerText = '時間割のデータ取得に失敗しました。';
-  });*/
-}
+let hasdata = false;
 
 function syncdata() {
+  document.getElementById('start').addEventListener('click', function() {
+    if (document.getElementById('time').innerText == 'error' || document.getElementById('time').innerText == 'NaN:NaN') {
+      console.log('startable');
+
+      fetch(`https://api.launchpencil.f5.si/studybattle/start?username=` + username, {
+        //mode: 'cors'
+      })
+      .then(response => response.text())
+      .then(data => {
+              alert(data);
+      })
+      .catch(error => {
+          alert('タイマーの開始に失敗しました。')
+          console.log(error);
+      });
+
+    } else {
+      alert('既にタイマーが進行中です')
+    }
+  });
+
+  document.getElementById('stop').addEventListener('click', function() {
+    if (document.getElementById('time').innerText == 'error' || document.getElementById('time').innerText == 'NaN:NaN') {
+      alert('タイマーが開始されていません');
+    } else {
+      console.log('stoppable');
+
+      fetch(`https://api.launchpencil.f5.si/studybattle/stop?username=` + username, {
+        //mode: 'cors'
+      })
+      .then(response => response.text())
+      .then(data => {
+              alert(data);
+      })
+      .catch(error => {
+          alert('タイマーの停止に失敗しました。')
+          console.log(error);
+      });
+    }
+  });
+}
+
+function whiledata() {
 
   fetch(`https://api.launchpencil.f5.si/studybattle/detail?username=` + username, {
     //mode: 'cors'
@@ -44,10 +64,26 @@ function syncdata() {
               return;
           }
           a.pop();
-          document.getElementById('time').innerText = 'time';
+          updateTimer(a[0])
   })
   .catch(error => {
       document.getElementById('time').innerText = 'タスクのデータ取得に失敗しました。';
       console.log(error);
   });
+}
+
+function updateTimer(startTime) {
+  // 現在の時刻を取得
+  const currentTime = new Date();
+
+  // 開始時刻からの経過時間を計算
+  const elapsedTime = new Date(currentTime - new Date(startTime));
+
+  // 分と秒を取得
+  const totalSeconds = Math.floor(elapsedTime / 1000);
+  const minutes = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
+  const seconds = (totalSeconds % 60).toString().padStart(2, '0');
+
+  // タイマーの表示形式を設定（例：mm:ss）
+  document.getElementById('time').innerText = `${minutes}:${seconds}`;
 }
