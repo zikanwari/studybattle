@@ -2,7 +2,7 @@
 .table {
   display: table;
   width: 100%;
-  background-color: #b6e9b7;
+  background-color: #82afa1;
   border-collapse: separate;
   border-spacing: 20px;
   border-radius: 10px;
@@ -19,7 +19,7 @@
   padding: 20px;
   vertical-align: middle;
   font-weight: bold;
-  border: 1px solid #ddd;
+  border: 1px solid #587460;
   border-radius: 10px;
 }
 
@@ -32,8 +32,8 @@ label {
 /* ボタンのスタイル */
 #setdata {
     padding: 8px 16px;
-    background-color: #4CAF50;
-    color: #fff;
+    background-color:  #4d8067e0; 
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -45,7 +45,7 @@ label {
 
 /* ボタンにマウスが乗ったときのスタイル */
 #setdata:hover {
-    background-color: #3e8e41;
+    background-color: #365848e0; 
 }
 
 
@@ -54,7 +54,7 @@ input[type="text"],
 input[type="password"] {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #943232;
     border-radius: 5px;
     box-sizing: border-box;
 }
