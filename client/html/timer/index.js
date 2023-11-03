@@ -1,6 +1,3 @@
-var username = localStorage.getItem('user');
-var istrain = localStorage.getItem('istrain');
-
 const timerInterval = setInterval(whiledata, 1000);
 
 let hasdata = false;

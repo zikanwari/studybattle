@@ -1,6 +1,11 @@
+var username;
+var istrain;
+
 changetime();
 
 function changetime() {
+    username = localStorage.getItem('user');
+    istrain = localStorage.getItem('istrain');
     document.getElementById("timer").classList.add("select");
     fetch(`timer/index.html`)
     .then(response => response.text())

@@ -121,6 +121,10 @@ const server = http.createServer((req, res) => {
     });
   } else {
     
+    
+    //Here is ranking
+
+
     connection.connect((err) => {
       if (err) {
         console.error('error connecting: ' + err.message);
@@ -128,7 +132,7 @@ const server = http.createServer((req, res) => {
         return;
       }
   
-      const sql = "SELECT * FROM data";
+      const sql = "SELECT * FROM data ORDER BY `study` DESC";
   
       connection.query(sql, (err, results, fields) => {
           if (err) {
@@ -136,6 +140,11 @@ const server = http.createServer((req, res) => {
               res.write('エラー,' + err.message);
               return;
           }
+
+          for (let i = 0; i < results.length; i++) {
+            res.write(results[i].user)
+          }
+
           connection.end();
       });
     })
