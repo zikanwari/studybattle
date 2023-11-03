@@ -142,7 +142,7 @@ const server = http.createServer((req, res) => {
           }
 
           for (let i = 0; i < results.length; i++) {
-            res.write(results[i].user)
+            res.write(results[i].user + ',' + results[i].study + ',');
           }
 
           connection.end();
