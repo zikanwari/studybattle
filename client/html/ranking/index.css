@@ -1,16 +1,18 @@
 /*ミニゲーム*/
 .circle6 {
-    margin-top: 10vw;
-    width: 18vw;
-    height: 18vw;
+    margin-top: 10px;
+    width: 17vw;
+    height: 17vw;
     background-color: #82afa1;
     border-radius: 50%; 
-    margin-left: 69vw; 
     transform: translate(-50%, -50%);
+    position: relative;
+    left: 430px;
   }
   #circle6Text {
-    color: rgb(216, 216, 216);
-    font-size: 3.5vw;
+    position: absolute;
+    top: 50%;
+    transform: translate(8%, -50%);
   }
 
     /*週*/
@@ -25,7 +27,6 @@
     transform: translate(-5%, -650%); /* 中央に配置 */
   }
   .square1 p {
-    color: rgb(216, 216, 216);
     font-size: 6.5vw;
     text-align: center;
   }
@@ -41,81 +42,75 @@
     transform: translate(-105%, -650%);
   }
   .square2 p {
-    color: rgb(216, 216, 216);
     font-size: 6.5vw;
     text-align: center;
   }
 
   .circle1 {
-    width: 16vw;
-    height: 16vw;
+    width: 14vw;
+    height: 14vw;
     background-color: #4d8067e0;
     border-radius: 50%; 
     margin-left: 10vw; 
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 20%);
   }
   .circle1 p {
-    color: rgb(216, 216, 216);
     font-size: 7vw;
     text-align: center;
   }
   
 .circle2 {
-    width: 16vw;
-    height: 16vw;
+    width: 14vw;
+    height: 14vw;
     background-color: #4d8067e0;
     border-radius: 50%; 
     margin-left: 10vw; 
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, 70%);
   }
   .circle2 p {
-    color: rgb(216, 216, 216);
     font-size: 7vw;
     text-align: center;
   }
   
 .circle3 {
-    width: 16vw;
-    height: 16vw;
+    width: 14vw;
+    height: 14vw;
     background-color: #4d8067e0;
     border-radius: 50%; 
     margin-left: 10vw; 
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 120%);
   }
   .circle3 p {
-    color: rgb(216, 216, 216);
     font-size: 6.5vw;
     text-align: center;
   }
   
 .circle4 {
-    width: 14vw;
-    height: 14vw;
+    width: 12vw;
+    height: 12vw;
     background-color: #4d8067e0;
     border-radius: 50%; 
     margin-left: 10vw; 
-    transform: translate(-50%, 105%);
+    transform: translate(-50%, 200%);
   }
   .circle4 p {
-    color: rgb(216, 216, 216);
     font-size: 6vw;
     text-align: center;
   }
   
 .circle5 {
-    width: 14vw;
-    height: 14vw;
+    width: 12vw;
+    height: 12vw;
     background-color: #4d8067e0;
     border-radius: 50%; 
     margin-left: 10vw; 
-    transform: translate(-50%, 160%);
+    transform: translate(-50%, 250%);
   }
 .circle5 p {
-    color: rgb(216, 216, 216);
     font-size: 6vw;
     text-align: center;
   }
 
 footer{
-  margin-top: 10px;
+  margin-top: 180px;
   }
