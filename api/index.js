@@ -145,7 +145,8 @@ const server = http.createServer((req, res) => {
             res.write(results[i].user + ',' + results[i].study + ',');
           }
 
-          res.write('end')
+          res.write('end');
+          res.end();
 
           connection.end();
       });
