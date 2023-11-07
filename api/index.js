@@ -145,12 +145,11 @@ const server = http.createServer((req, res) => {
             res.write(results[i].user + ',' + results[i].study + ',');
           }
 
+          res.write('end')
+
           connection.end();
       });
     })
-    res.write('fight!')
-    res.end();
-
 }});
 
 server.listen(3000, () => {
