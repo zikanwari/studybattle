@@ -1,6 +1,6 @@
 
 .circle {
-  margin-top: -60vw;
+  margin-top: -52vw;
   width: 18vw;
   height: 11vw;
   background-color: #82afa1;
@@ -10,6 +10,7 @@
 }
 #circleText {
   font-size: 3.5vw;
+  font-weight: bold;
   margin-top: 1vw;
 }
 
@@ -27,6 +28,7 @@
 .square1 p {
   font-size: 7.5vw;
   text-align: center;
+  margin: -5px;
 }
 
   /*通学中*/
@@ -43,6 +45,7 @@
 .square2 p {
   font-size: 7.5vw;
   text-align: center;
+  margin: -5px;
 }
 
 
@@ -59,7 +62,7 @@
   transform: translate(-105%, 20%); 
 }
 .square3 p {
-  font-size: 6.0vw;
+  font-size: 6.5vw;
   text-align: center;
   margin: 10px;
 }
@@ -76,11 +79,12 @@
   transform: translate(-4%, 20%);
 }
 .square4 p {
-  font-size: 6.0vw;
+  font-size: 6.5vw;
   text-align: center;
   margin: 10px;
 }
 
+/*タイマー*/
 .square5 {
   width: 80vw; 
   height: 20vw; 

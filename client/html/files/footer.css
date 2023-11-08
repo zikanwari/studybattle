@@ -16,18 +16,19 @@ main {
     border-radius: 20px;
     margin-top: 2vh;
     padding: 2%;
-    overflow: auto;
+    /*overflow: auto;*/
 }
     
 p {
     margin: 0;
     color: rgb(216, 216, 216);
+    font-family: 'Noto Sans JP', sans-serif;
 }
     
 footer {
     width: 95%;
     margin: 1vh auto 0;
-    margin-top: 60vw;
+    margin-top: 55vw;
 }
 
 
