@@ -71,6 +71,15 @@
     transform: translate(0%, 12.5%);
   }
   
+.square2 {
+    width: 75vw; 
+    height: 16vw; 
+    background-color:  #f8f8f8e0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-45%, 55%);
+    border-radius: 0; 
+  }
 .circle2 {
     width: 14vw;
     height: 14vw;
@@ -84,18 +93,16 @@
     text-align: center;
     transform: translate(0%, 12.5%);
   }
-  .square2 {
-    width: 80vw; 
-    height: 20vw; 
+  
+  .square3 {
+    width: 75vw; 
+    height: 16vw; 
     background-color:  #f8f8f8e0;
-    margin-top: -15vw; 
     position: absolute;
-    top: 50%; 
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-45%, 100.5%);
     border-radius: 0; 
   }
-  
 .circle3 {
     width: 14vw;
     height: 14vw;
@@ -104,23 +111,21 @@
     margin-left: 8vw; 
     transform: translate(-50%, 120%);
   }
-  .circle3 p {
+.circle3 p {
     font-size: 7vw;
     text-align: center;
     transform: translate(0%, 12.5%);
   }
-  .square3 {
-    width: 80vw; 
-    height: 20vw; 
+  
+  .square4 {
+    width: 75vw; 
+    height: 14vw;  
     background-color:  #f8f8f8e0;
-    margin-top: -15vw; 
     position: absolute;
-    top: 50%; 
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-45%, 165.5%);
     border-radius: 0; 
   }
-  
 .circle4 {
     width: 12vw;
     height: 12vw;
@@ -134,18 +139,16 @@
     text-align: center;
     transform: translate(0%, 17%);
   }
-  .square4 {
-    width: 80vw; 
-    height: 20vw;  
-    background-color:  #f8f8f8e0;
-    margin-top: -15vw; 
+
+.square5 {
+    width: 75vw; 
+    height: 14vw; 
+    background-color: #f8f8f8e0;
     position: absolute;
-    top: 50%; 
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-45%, 205.5%);
     border-radius: 0; 
   }
-  
 .circle5 {
     width: 12vw;
     height: 12vw;
@@ -159,17 +162,7 @@
     text-align: center;
     transform: translate(0%, 17%);
   }
-  .square5 {
-    width: 80vw; 
-    height: 20vw; 
-    background-color: #f8f8f8e0;
-    margin-top: -15vw; 
-    position: absolute;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 0; 
-  }
+  
 
 footer{
   margin-top: 33vw;

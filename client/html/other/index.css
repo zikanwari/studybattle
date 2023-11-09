@@ -1,3 +1,73 @@
+/*最高順位*/
+.square1  {
+  width: 32vw; 
+  height: 4vw; 
+  background-color: #4d8067e0; 
+  border-radius: 10px; /* 角を丸める */
+  position: absolute;
+}
+.square1 p {
+  font-size: 3vw;
+  text-align: center;
+  margin: -2px;
+}
+.square4 {
+  width: 80vw; 
+  height: 16vw; 
+  background-color:  #f8f8f8e0;
+  position: absolute;
+  transform: translate(5%, 20%);
+  border-radius: 0; 
+}
+
+  /*今週の勉強時間*/
+.square2  {
+  width: 32vw;
+  height: 4vw; 
+  background-color: #4d8067e0; 
+  border-radius: 10px; /* 角を丸める */
+  position: absolute;
+  top: 20%;
+}
+.square2 p {
+  font-size: 3vw;
+  text-align: center;
+  margin: -2px;
+}
+.square5 {
+  width: 80vw; 
+  height: 16vw; 
+  background-color:  #f8f8f8e0;
+  position: absolute;
+  
+  transform: translate(5%, 20%);
+  border-radius: 0; 
+}
+
+
+  /*総合勉強時間*/
+.square3  {
+  width: 32vw; 
+  height: 4vw; 
+  background-color: #4d8067e0; 
+  border-radius: 10px; /* 角を丸める */
+  position: absolute;
+  top: 40%;
+}
+.square3 p {
+  font-size: 3vw;
+  text-align: center;
+  margin: -2px;
+}
+.square6 {
+  width: 80vw; 
+  height: 16vw; 
+  background-color:  #f8f8f8e0;
+  position: absolute;
+  transform: translate(5%, 1%);
+  border-radius: 0; 
+}
+
 /* table要素のスタイル */
 .table {
   display: table;
@@ -6,6 +76,7 @@
   border-collapse: separate;
   border-spacing: 20px;
   border-radius: 10px;
+  margin-top: 90vw;
 }
 
 /* テーブルの各行のスタイル */
@@ -81,4 +152,6 @@ input[type="password"]:focus {
   display: block;
 }
 
-
+footer{
+  margin-top: 0vw;
+}
