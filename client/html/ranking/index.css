@@ -1,4 +1,4 @@
-/*ミニゲーム*/
+  /*ミニゲーム*/
 .circle6 {
     margin-top: 10px;
     width: 17vw;
@@ -8,6 +8,8 @@
     transform: translate(-50%, -50%);
     position: relative;
     margin-left: 80vw;
+    border: 0.5px solid   #5b776e;/* 縁取りの色と太さを指定 */
+    border-radius: 50%;
   }
   #circle6Text {
     font-size: 3.3vw;
@@ -17,7 +19,7 @@
     transform: translate(2%, -50%);
   }
 
-    /*週*/
+  /*週*/
 .square6  {
     width: 30vw; 
     height: 10vw; 
@@ -27,12 +29,14 @@
     top: 50%; /* 上端を画面の中央に配置 */
     left: 50%; /* 左端を画面の中央に配置 */
     transform: translate(-5%, -650%); /* 中央に配置 */
+    border: 1px solid  #345847e0; 
   }
   .square6 p {
     font-size: 6.5vw;
     text-align: center;
   }
-    /*総合*/
+
+  /*総合*/
 .square7  {
     width: 30vw; 
     height: 10vw; 
@@ -42,12 +46,14 @@
     top: 50%;
     left: 50%; 
     transform: translate(-105%, -650%);
+    border: 1px solid   #345847e0; 
   }
   .square7 p {
     font-size: 6.5vw;
     text-align: center;
   }
 
+  /*1位*/
   .square1 {
     width: 75vw; 
     height: 16vw; 
@@ -56,6 +62,7 @@
     left: 50%;
     transform: translate(-45%, 10.5%);
     border-radius: 0; 
+    border: 1px solid #c7c7c7;
   }
   .circle1 {
     width: 14vw;
@@ -64,13 +71,15 @@
     border-radius: 50%; 
     margin-left: 8vw; 
     transform: translate(-50%, 20%);
+    border: 1px solid  #757575;
   }
   .circle1 p {
     font-size: 7vw;
     text-align: center;
     transform: translate(0%, 12.5%);
   }
-  
+
+  /*２位*/
 .square2 {
     width: 75vw; 
     height: 16vw; 
@@ -79,6 +88,7 @@
     left: 50%;
     transform: translate(-45%, 55%);
     border-radius: 0; 
+    border: 1px solid #c7c7c7;
   }
 .circle2 {
     width: 14vw;
@@ -87,13 +97,15 @@
     border-radius: 50%; 
     margin-left: 8vw; 
     transform: translate(-50%, 70%);
+    border: 1px solid  #757575;
   }
   .circle2 p {
     font-size: 7vw;
     text-align: center;
     transform: translate(0%, 12.5%);
   }
-  
+
+    /*３位*/
   .square3 {
     width: 75vw; 
     height: 16vw; 
@@ -102,6 +114,7 @@
     left: 50%;
     transform: translate(-45%, 100.5%);
     border-radius: 0; 
+    border: 1px solid #c7c7c7;
   }
 .circle3 {
     width: 14vw;
@@ -110,13 +123,15 @@
     border-radius: 50%; 
     margin-left: 8vw; 
     transform: translate(-50%, 120%);
+    border: 1px solid  #757575;
   }
 .circle3 p {
     font-size: 7vw;
     text-align: center;
     transform: translate(0%, 12.5%);
   }
-  
+
+    /*４位*/
   .square4 {
     width: 75vw; 
     height: 14vw;  
@@ -125,6 +140,7 @@
     left: 50%;
     transform: translate(-45%, 165.5%);
     border-radius: 0; 
+    border: 1px solid #c7c7c7;
   }
 .circle4 {
     width: 12vw;
@@ -133,6 +149,7 @@
     border-radius: 50%; 
     margin-left: 8vw; 
     transform: translate(-50%, 200%);
+    border: 1px solid  #757575;
   }
   .circle4 p {
     font-size: 6vw;
@@ -140,6 +157,7 @@
     transform: translate(0%, 17%);
   }
 
+    /*５位*/
 .square5 {
     width: 75vw; 
     height: 14vw; 
@@ -148,6 +166,7 @@
     left: 50%;
     transform: translate(-45%, 205.5%);
     border-radius: 0; 
+    border: 1px solid #c7c7c7;
   }
 .circle5 {
     width: 12vw;
@@ -156,6 +175,7 @@
     border-radius: 50%; 
     margin-left: 8vw; 
     transform: translate(-50%, 250%);
+    border: 1px solid  #757575;
   }
 .circle5 p {
     font-size: 6vw;
