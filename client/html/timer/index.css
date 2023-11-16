@@ -1,18 +1,17 @@
-
+/*ミニゲーム*/
 .circle {
-  margin-top: -52vw;
-  width: 18vw;
+  width: 17vw;
   height: 11vw;
   background-color: #82afa1;
   border-radius: 50%; 
   margin-left: 75vw; 
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -340%);
   border: 0.5px solid   #5b776e;/* 縁取りの色と太さを指定 */
 }
 #circleText {
-  font-size: 3.5vw;
+  font-size: 3vw;
   font-weight: bold;
-  margin-top: 1vw;
+  margin-top: 2vw;
 }
 
   /*家*/
@@ -24,7 +23,7 @@
   position: absolute;
   top: 50%; /* 上端を画面の中央に配置 */
   left: 50%; /* 左端を画面の中央に配置 */
-  transform: translate(-105%, -300%); /* 中央に配置 */
+  transform: translate(-105%, -220%); /* 中央に配置 */
   border: 1px solid #305040e0; 
 }
 .square1 p {
@@ -42,7 +41,7 @@
   position: absolute;
   top: 50%;
   left: 50%; 
-  transform: translate(-4%, -300%); 
+  transform: translate(-4%, -220%); 
   border: 1px solid #305040e0; 
 }
 .square2 p {
@@ -60,9 +59,9 @@
   background-color: #4d8067e0; 
   border-radius: 10px; /* 角を丸める */
   position: absolute;
-  top: 53%; 
+  top: 50%; 
   left: 50%; 
-  transform: translate(-105%, 20%); 
+  transform: translate(-105%, 50%); 
   border: 1px solid #305040e0; 
 }
 .square3 p {
@@ -78,9 +77,9 @@
   background-color: #4d8067e0; 
   border-radius: 10px; 
   position: absolute;
-  top: 53%; 
+  top: 50%; 
   left: 50%; 
-  transform: translate(-4%, 20%);
+  transform: translate(-4%, 50%);
   border: 1px solid #305040e0; 
 }
 .square4 p {
@@ -94,11 +93,10 @@
   width: 80vw; 
   height: 20vw; 
   background-color: #1c382ae0;
-  margin-top: -15vw; 
   position: absolute;
   top: 50%; 
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -70%);
   border-radius: 0; 
   border: 2px solid #14271de0;
 }

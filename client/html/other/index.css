@@ -42,7 +42,7 @@
   height: 16vw; 
   background-color:  #f8f8f8e0;
   position: absolute;
-  transform: translate(5%, 190%);
+  transform: translate(5%, 150%);
   border-radius: 0; 
   border: 1px solid #c7c7c7;
 }
@@ -55,7 +55,7 @@
   background-color: #4d8067e0; 
   border-radius: 10px; /* 角を丸める */
   position: absolute;
-  top: 40%;
+  top: 36%;
   border: 1px solid #375a49e0; 
 }
 .square3 p {
@@ -68,7 +68,7 @@
   height: 16vw; 
   background-color:  #f8f8f8e0;
   position: absolute;
-  transform: translate(5%, 390%);
+  transform: translate(5%, 280%);
   border-radius: 0; 
   border: 1px solid #c7c7c7;
 }
@@ -81,7 +81,7 @@
   border-collapse: separate;
   border-spacing: 20px;
   border-radius: 10px;
-  margin-top: 90vw;
+  margin-top: 70vw;
 }
 
 /* テーブルの各行のスタイル */

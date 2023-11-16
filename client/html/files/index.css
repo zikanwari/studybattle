@@ -4,4 +4,14 @@
 #timetable {
     color:  rgb(82, 97, 86)
 }
-
+/* スマートフォン用スタイル */
+  @media (max-width: 767px) {
+  }
+  
+  /* タブレット用スタイル */
+  @media (min-width: 768px) and (max-width: 1023px) {
+  }
+  
+  /* デスクトップ用スタイル */
+  @media (min-width: 1024px) {
+  }
