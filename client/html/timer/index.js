@@ -30,6 +30,8 @@ function syncdata() {
     } else {
       console.log('stoppable');
 
+      var score = document.getElementById('time').innerText.match(/\d{2}(?=:)/)[0];
+
       fetch(`https://api.launchpencil.f5.si/studybattle/stop?username=` + username, {
         //mode: 'cors'
       })
