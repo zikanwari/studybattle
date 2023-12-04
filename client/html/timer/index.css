@@ -5,7 +5,7 @@
   background-color: #82afa1;
   border-radius: 50%; 
   margin-left: 75vw; 
-  transform: translate(-50%, -340%);
+  transform: translate(-50%, -310%);
   border: 0.5px solid   #5b776e;/* 縁取りの色と太さを指定 */
 }
 #circleText {
