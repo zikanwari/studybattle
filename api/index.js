@@ -110,6 +110,8 @@ const server = http.createServer((req, res) => {
           if (err) {
               console.error('error querying: ' + err.stack);
               res.write('エラー,' + err.message);
+              connection.end();
+              res.end();
               return;
           }
 

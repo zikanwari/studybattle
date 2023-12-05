@@ -1,181 +1,194 @@
-  /*ミニゲーム*/
+/* ミニゲーム */
 .circle6 {
-    width: 14vw;
-    height: 14vw;
-    background-color: #82afa1;
-    transform: translate(510%, -60%);
-    position: relative;
-    border: 0.5px solid   #5b776e;/* 縁取りの色と太さを指定 */
-    border-radius: 50%;
-  }
-  #circle6Text {
-    font-size: 2.5vw;
-    font-weight: bold;
-    position: absolute;
-    top: 50%;
-    transform: translate(2%, -50%);
-  }
+  width: 15vw;
+  height: 15vw;
+  background-color: #82afa1;
+  transform: translate(510%, -60%);
+  position: relative;
+  border: 0.5px solid #5b776e; /* 縁取りの色と太さを指定 */
+  border-radius: 50%;
+}
 
-  /*週*/
-.square6  {
-    width: 28vw; 
-    height: 8vw; 
-    background-color: #4d8067e0; 
-    border-radius: 10px; /* 角を丸める */
-    position: absolute;
-    top: 50%; /* 上端を画面の中央に配置 */
-    left: 50%; /* 左端を画面の中央に配置 */
-    transform: translate(-5%, -690%); /* 中央に配置 */
-    border: 1px solid  #345847e0; 
-  }
-  .square6 p {
-    font-size: 6.5vw;
-    text-align: center;
-    transform: translate(0%, -8%);
-  }
+#circle6Text {
+  font-size: 2.5vw;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  transform: translate(2%, -50%);
+}
 
-  /*総合*/
-.square7  {
-    width: 28vw; 
-    height: 8vw; 
-    background-color: #4d8067e0; 
-    border-radius: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%; 
-    transform: translate(-105%, -690%);
-    border: 1px solid   #345847e0; 
-  }
-  .square7 p {
-    font-size: 6.5vw;
-    text-align: center;
-    transform: translate(0%, -8%);
-  }
+/* 週 */
+.square6 {
+  width: 28vw;
+  height: 8vw;
+  background-color: #4d8067e0;
+  border-radius: 10px; /* 角を丸める */
+  position: absolute;
+  top: 50%; /* 上端を画面の中央に配置 */
+  left: 50%; /* 左端を画面の中央に配置 */
+  transform: translate(-5%, -690%); /* 中央に配置 */
+  border: 1px solid #345847e0;
+}
 
-  /*1位*/
-  .square1 {
-    width: 80vw; 
-    height: 14vw; 
-    background-color: #f8f8f8e0;
-    position: absolute;
-    left: 50%;
-    transform: translate(-45%, -40%);
-    border-radius: 0; 
-    border: 1px solid #c7c7c7;
-  }
-  .circle1 {
-    width: 12vw;
-    height: 12vw;
-    background-color: #4d8067e0;
-    border-radius: 50%; 
-    margin-left: 5vw; 
-    transform: translate(-50%, -40%);
-    border: 1px solid  #757575;
-  }
-  .circle1 p {
-    font-size: 6vw;
-    text-align: center;
-    transform: translate(0%, 12.5%);
-  }
+.square6 p {
+  font-size: 6.5vw;
+  text-align: center;
+  transform: translate(0%, -8%);
+}
 
-  /*２位*/
+/* 総合 */
+.square7 {
+  width: 28vw;
+  height: 8vw;
+  background-color: #4d8067e0;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-105%, -690%);
+  border: 1px solid #345847e0;
+}
+
+.square7 p {
+  font-size: 6.5vw;
+  text-align: center;
+  transform: translate(0%, -8%);
+}
+
+/* 1位 */
+.square1 {
+  width: 80vw;
+  height: 14vw;
+  background-color: #f8f8f8e0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-45%, 10%);
+  border-radius: 0;
+  border: 1px solid #c7c7c7;
+}
+
+.circle1 {
+  width: 12vw;
+  height: 12vw;
+  background-color: #4d8067e0;
+  border-radius: 50%;
+  margin-left: 5vw;
+  transform: translate(-50%, 20%);
+  border: 1px solid #757575;
+}
+
+.circle1 p {
+  font-size: 6vw;
+  text-align: center;
+  transform: translate(0%, 12.5%);
+}
+
+/* ２位 */
 .square2 {
-    width: 80vw; 
-    height: 14vw; 
-    background-color:  #f8f8f8e0;
-    position: absolute;
-    left: 50%;
-    transform: translate(-45%, -5%);
-    border-radius: 0; 
-    border: 1px solid #c7c7c7;
-  }
+  width: 80vw;
+  height: 14vw;
+  background-color: #f8f8f8e0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-45%, 50%);
+  border-radius: 0;
+  border: 1px solid #c7c7c7;
+}
+
 .circle2 {
-    width: 12vw;
-    height: 12vw;
-    background-color: #4d8067e0; 
-    border-radius: 50%; 
-    margin-left: 5vw; 
-    transform: translate(-50%, 0%);
-    border: 1px solid  #757575;
-  }
-  .circle2 p {
-    font-size: 6vw;
-    text-align: center;
-    transform: translate(0%, 12.5%);
-  }
+  width: 12vw;
+  height: 12vw;
+  background-color: #4d8067e0;
+  border-radius: 50%;
+  margin-left: 5vw;
+  transform: translate(-50%, 65%);
+  border: 1px solid #757575;
+}
 
-    /*３位*/
-  .square3 {
-    width: 80vw; 
-    height: 14vw; 
-    background-color:  #f8f8f8e0;
-    position: absolute;
-    left: 50%;
-    transform: translate(-45%, 30%);
-    border-radius: 0; 
-    border: 1px solid #c7c7c7;
-  }
+.circle2 p {
+  font-size: 6vw;
+  text-align: center;
+  transform: translate(0%, 12.5%);
+}
+
+/* ３位 */
+.square3 {
+  width: 80vw;
+  height: 14vw;
+  background-color: #f8f8f8e0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-45%, 90%);
+  border-radius: 0;
+  border: 1px solid #c7c7c7;
+}
+
 .circle3 {
-    width: 12vw;
-    height: 12vw;
-    background-color: #4d8067e0;
-    border-radius: 50%; 
-    margin-left: 5vw; 
-    transform: translate(-50%, 50%);
-    border: 1px solid  #757575;
-  }
+  width: 12vw;
+  height: 12vw;
+  background-color: #4d8067e0;
+  border-radius: 50%;
+  margin-left: 5vw;
+  transform: translate(-50%, 110%);
+  border: 1px solid #757575;
+}
+
 .circle3 p {
-    font-size: 6vw;
-    text-align: center;
-    transform: translate(0%, 12.5%);
-  }
+  font-size: 6vw;
+  text-align: center;
+  transform: translate(0%, 12.5%);
+}
 
-    /*４位*/
-  .square4 {
-    width: 80vw; 
-    height: 12vw;  
-    background-color:  #f8f8f8e0;
-    position: absolute;
-    left: 50%;
-    transform: translate(-45%, 90%);
-    border-radius: 0; 
-    border: 1px solid #c7c7c7;
-  }
+/* ４位 */
+.square4 {
+  width: 80vw;
+  height: 12vw;
+  background-color: #f8f8f8e0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-45%, 150%);
+  border-radius: 0;
+  border: 1px solid #c7c7c7;
+}
+
 .circle4 {
-    width: 10vw;
-    height: 10vw;
-    background-color: #4d8067e0;
-    border-radius: 50%; 
-    margin-left: 5vw; 
-    transform: translate(-50%, 115%);
-    border: 1px solid  #757575;
-  }
-  .circle4 p {
-    font-size: 5vw;
-    text-align: center;
-    transform: translate(0%, 17%);
-  }
+  width: 10vw;
+  height: 10vw;
+  background-color: #4d8067e0;
+  border-radius: 50%;
+  margin-left: 5vw;
+  transform: translate(-50%, 190%);
+  border: 1px solid #757575;
+}
 
-    /*５位*/
+.circle4 p {
+  font-size: 5vw;
+  text-align: center;
+  transform: translate(0%, 17%);
+}
+
+/* ５位 */
 .square5 {
-    width: 80vw; 
-    height: 12vw; 
-    background-color: #f8f8f8e0;
-    position: absolute;
-    left: 50%;
-    transform: translate(-45%, 120%);
-    border-radius: 0; 
-    border: 1px solid #c7c7c7;
-  }
+  width: 80vw;
+  height: 12vw;
+  background-color: #f8f8f8e0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-45%, 200%);
+  border-radius: 0;
+  border: 1px solid #c7c7c7;
+}
+
 .circle5 {
-    width: 10vw;
-    height: 10vw;
-    background-color: #4d8067e0;
-    border-radius: 50%; 
-    margin-left: 5vw; 
-    transform: translate(-50%, 155%);
-    border: 1px solid  #757575;
-  }
+  width: 10vw;
+  height: 10vw;
+  background-color: #4d8067e0;
+  border-radius: 50%;
+  margin-left: 5vw;
+  transform: translate(-50%, 250%);
+  border: 1px solid #757575;
+}
+
 .circle5 p {
     font-size: 5vw;
     text-align: center;

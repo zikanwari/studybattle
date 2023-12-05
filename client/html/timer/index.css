@@ -1,102 +1,103 @@
-/*ミニゲーム*/
+/* ミニゲーム */
 .circle {
   width: 17vw;
   height: 11vw;
   background-color: #82afa1;
-  border-radius: 50%; 
-  margin-left: 75vw; 
-  transform: translate(-50%, -310%);
-  border: 0.5px solid   #5b776e;/* 縁取りの色と太さを指定 */
+  border-radius: 50%;
+  margin-left: 75vw;
+  transform: translate(-50%, -330%);
+  border: 0.5px solid #5b776e; /* 縁取りの色と太さを指定 */
 }
+
 #circleText {
   font-size: 3vw;
   font-weight: bold;
   margin-top: 2vw;
 }
 
-  /*家*/
-.square1  {
-  width: 32vw; 
-  height: 12vw; 
-  background-color: #4d8067e0; 
+/* 家 */
+.square1 {
+  width: 32vw;
+  height: 13vw;
+  background-color: #4d8067e0;
   border-radius: 10px; /* 角を丸める */
   position: absolute;
-  top: 50%; /* 上端を画面の中央に配置 */
+  top: 30%; /* 上端を画面の中央に配置 */
   left: 50%; /* 左端を画面の中央に配置 */
   transform: translate(-105%, -220%); /* 中央に配置 */
-  border: 1px solid #305040e0; 
+  border: 1px solid #305040e0;
 }
+
 .square1 p {
   font-size: 7.5vw;
   text-align: center;
-  margin: -5px;
 }
 
-  /*通学中*/
-.square2  {
+/* 通学中 */
+.square2 {
   width: 32vw;
-  height: 12vw; 
-  background-color: #4d8067e0; 
+  height: 13vw;
+  background-color: #4d8067e0;
   border-radius: 10px; /* 角を丸める */
   position: absolute;
-  top: 50%;
-  left: 50%; 
-  transform: translate(-4%, -220%); 
-  border: 1px solid #305040e0; 
+  top: 30%;
+  left: 50%;
+  transform: translate(-4%, -220%);
+  border: 1px solid #305040e0;
 }
+
 .square2 p {
   font-size: 7.5vw;
   text-align: center;
-  margin: -5px;
 }
 
-
-
-  /*スタート*/
-.square3  {
-  width: 32vw; 
-  height: 16vw; 
-  background-color: #4d8067e0; 
+/* スタート */
+.square3 {
+  width: 32vw;
+  height: 16vw;
+  background-color: #4d8067e0;
   border-radius: 10px; /* 角を丸める */
   position: absolute;
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-105%, 50%); 
-  border: 1px solid #305040e0; 
+  top: 30%;
+  left: 50%;
+  transform: translate(-105%, 50%);
+  border: 1px solid #305040e0;
 }
+
 .square3 p {
   font-size: 6.5vw;
   text-align: center;
   margin: 10px;
 }
 
-  /*ストップ*/
-.square4  {
-  width: 32vw; 
-  height: 16vw; 
-  background-color: #4d8067e0; 
-  border-radius: 10px; 
+/* ストップ */
+.square4 {
+  width: 32vw;
+  height: 16vw;
+  background-color: #4d8067e0;
+  border-radius: 10px;
   position: absolute;
-  top: 50%; 
-  left: 50%; 
+  top: 30%;
+  left: 50%;
   transform: translate(-4%, 50%);
-  border: 1px solid #305040e0; 
+  border: 1px solid #305040e0;
 }
+
 .square4 p {
   font-size: 6.5vw;
   text-align: center;
   margin: 10px;
 }
 
-/*タイマー*/
+/* タイマー */
 .square5 {
-  width: 80vw; 
-  height: 20vw; 
+  width: 80vw;
+  height: 20vw;
   background-color: #1c382ae0;
   position: absolute;
-  top: 50%; 
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -70%);
-  border-radius: 0; 
+  border-radius: 0;
   border: 2px solid #14271de0;
 }
