@@ -1,20 +1,22 @@
-/* ミニゲーム */
-.circle6 {
-  width: 15vw;
-  height: 15vw;
-  background-color: #82afa1;
-  transform: translate(510%, -60%);
-  position: relative;
-  border: 0.5px solid #5b776e; /* 縁取りの色と太さを指定 */
-  border-radius: 50%;
+.flex_test-box {
+  display: flex;/* 横並び */
+  justify-content:center;
 }
 
+/* ミニゲーム */
+.circle6 {
+  width: 17vw;
+  height: 17vw;
+  background-color: #82afa1;
+  border-radius: 50%;
+  margin-left: 70vw;
+  border: 0.5px solid #5b776e; /* 縁取りの色と太さを指定 */
+}
 #circle6Text {
-  font-size: 2.5vw;
+  font-size: 3vw;
   font-weight: bold;
-  position: absolute;
-  top: 50%;
-  transform: translate(2%, -50%);
+  text-align: center;
+  line-height: 17vw;
 }
 
 /* 週 */
@@ -23,17 +25,13 @@
   height: 8vw;
   background-color: #4d8067e0;
   border-radius: 10px; /* 角を丸める */
-  position: absolute;
-  top: 50%; /* 上端を画面の中央に配置 */
-  left: 50%; /* 左端を画面の中央に配置 */
-  transform: translate(-5%, -690%); /* 中央に配置 */
   border: 1px solid #345847e0;
 }
 
 .square6 p {
   font-size: 6.5vw;
   text-align: center;
-  transform: translate(0%, -8%);
+  line-height: 8vw;
 }
 
 /* 総合 */
@@ -42,17 +40,13 @@
   height: 8vw;
   background-color: #4d8067e0;
   border-radius: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-105%, -690%);
   border: 1px solid #345847e0;
 }
 
 .square7 p {
   font-size: 6.5vw;
   text-align: center;
-  transform: translate(0%, -8%);
+  line-height: 8vw;
 }
 
 /* 1位 */
@@ -60,10 +54,6 @@
   width: 80vw;
   height: 14vw;
   background-color: #f8f8f8e0;
-  position: absolute;
-  left: 50%;
-  transform: translate(-45%, 10%);
-  border-radius: 0;
   border: 1px solid #c7c7c7;
 }
 
@@ -73,14 +63,13 @@
   background-color: #4d8067e0;
   border-radius: 50%;
   margin-left: 5vw;
-  transform: translate(-50%, 20%);
   border: 1px solid #757575;
 }
 
 .circle1 p {
   font-size: 6vw;
   text-align: center;
-  transform: translate(0%, 12.5%);
+  line-height: 12vw;
 }
 
 /* ２位 */
@@ -88,10 +77,6 @@
   width: 80vw;
   height: 14vw;
   background-color: #f8f8f8e0;
-  position: absolute;
-  left: 50%;
-  transform: translate(-45%, 50%);
-  border-radius: 0;
   border: 1px solid #c7c7c7;
 }
 
@@ -101,14 +86,13 @@
   background-color: #4d8067e0;
   border-radius: 50%;
   margin-left: 5vw;
-  transform: translate(-50%, 65%);
   border: 1px solid #757575;
 }
 
 .circle2 p {
   font-size: 6vw;
   text-align: center;
-  transform: translate(0%, 12.5%);
+  line-height: 12vw;
 }
 
 /* ３位 */
@@ -116,10 +100,6 @@
   width: 80vw;
   height: 14vw;
   background-color: #f8f8f8e0;
-  position: absolute;
-  left: 50%;
-  transform: translate(-45%, 90%);
-  border-radius: 0;
   border: 1px solid #c7c7c7;
 }
 
@@ -129,14 +109,13 @@
   background-color: #4d8067e0;
   border-radius: 50%;
   margin-left: 5vw;
-  transform: translate(-50%, 110%);
   border: 1px solid #757575;
 }
 
 .circle3 p {
   font-size: 6vw;
   text-align: center;
-  transform: translate(0%, 12.5%);
+  line-height: 12vw;
 }
 
 /* ４位 */
@@ -144,10 +123,6 @@
   width: 80vw;
   height: 12vw;
   background-color: #f8f8f8e0;
-  position: absolute;
-  left: 50%;
-  transform: translate(-45%, 150%);
-  border-radius: 0;
   border: 1px solid #c7c7c7;
 }
 
@@ -157,14 +132,13 @@
   background-color: #4d8067e0;
   border-radius: 50%;
   margin-left: 5vw;
-  transform: translate(-50%, 190%);
   border: 1px solid #757575;
 }
 
 .circle4 p {
   font-size: 5vw;
   text-align: center;
-  transform: translate(0%, 17%);
+  line-height: 10vw;
 }
 
 /* ５位 */
@@ -172,10 +146,6 @@
   width: 80vw;
   height: 12vw;
   background-color: #f8f8f8e0;
-  position: absolute;
-  left: 50%;
-  transform: translate(-45%, 200%);
-  border-radius: 0;
   border: 1px solid #c7c7c7;
 }
 
@@ -185,16 +155,11 @@
   background-color: #4d8067e0;
   border-radius: 50%;
   margin-left: 5vw;
-  transform: translate(-50%, 250%);
   border: 1px solid #757575;
 }
 
 .circle5 p {
     font-size: 5vw;
     text-align: center;
-    transform: translate(0%, 17%);
-  }
-
-footer{
-  margin-top: 20vw;
+    line-height: 10vw;
   }

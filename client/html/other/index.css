@@ -4,21 +4,16 @@
   height: 4vw; 
   background-color: #4d8067e0; 
   border-radius: 10px; /* 角を丸める */
-  position: absolute;
   border: 1px solid #c7c7c7;
 }
 .square1 p {
   font-size: 3vw;
   text-align: center;
-  margin: -2px;
 }
 .square4 {
   width: 80vw; 
   height: 16vw; 
   background-color:  #f8f8f8e0;
-  position: absolute;
-  transform: translate(5%, 20%);
-  border-radius: 0; 
   border: 1px solid #c7c7c7;
 }
 
@@ -28,22 +23,16 @@
   height: 4vw; 
   background-color: #4d8067e0; 
   border-radius: 10px; /* 角を丸める */
-  position: absolute;
-  top: 20%;
   border: 1px solid #375a49e0; 
 }
 .square2 p {
   font-size: 3vw;
   text-align: center;
-  margin: -2px;
 }
 .square5 {
   width: 80vw; 
   height: 16vw; 
   background-color:  #f8f8f8e0;
-  position: absolute;
-  transform: translate(5%, 150%);
-  border-radius: 0; 
   border: 1px solid #c7c7c7;
 }
 
@@ -54,22 +43,16 @@
   height: 4vw; 
   background-color: #4d8067e0; 
   border-radius: 10px; /* 角を丸める */
-  position: absolute;
-  top: 36%;
   border: 1px solid #375a49e0; 
 }
 .square3 p {
   font-size: 3vw;
   text-align: center;
-  margin: -2px;
 }
 .square6 {
   width: 80vw; 
   height: 16vw; 
   background-color:  #f8f8f8e0;
-  position: absolute;
-  transform: translate(5%, 280%);
-  border-radius: 0; 
   border: 1px solid #c7c7c7;
 }
 

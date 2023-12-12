@@ -1,18 +1,29 @@
+#container {
+  display: grid; /* 縦のみ */
+  gap: 10VW;/*要素同士の間*/
+  grid-template-rows: 17VW 13VW 20VW 16VW 1fr ;
+  grid-template-columns:  auto ;
+}
+.flex_test-box {
+  display: flex;/* 横並び */
+  justify-content:center;
+}
+
 /* ミニゲーム */
 .circle {
   width: 17vw;
-  height: 11vw;
+  height: 17vw;
   background-color: #82afa1;
   border-radius: 50%;
-  margin-left: 75vw;
-  transform: translate(-50%, -330%);
+  margin-left: 70vw;
   border: 0.5px solid #5b776e; /* 縁取りの色と太さを指定 */
 }
 
 #circleText {
   font-size: 3vw;
   font-weight: bold;
-  margin-top: 2vw;
+  text-align: center;
+  line-height: 17vw;
 }
 
 /* 家 */
@@ -21,16 +32,13 @@
   height: 13vw;
   background-color: #4d8067e0;
   border-radius: 10px; /* 角を丸める */
-  position: absolute;
-  top: 30%; /* 上端を画面の中央に配置 */
-  left: 50%; /* 左端を画面の中央に配置 */
-  transform: translate(-105%, -220%); /* 中央に配置 */
   border: 1px solid #305040e0;
 }
 
 .square1 p {
   font-size: 7.5vw;
   text-align: center;
+  line-height: 13vw;
 }
 
 /* 通学中 */
@@ -39,16 +47,23 @@
   height: 13vw;
   background-color: #4d8067e0;
   border-radius: 10px; /* 角を丸める */
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-4%, -220%);
   border: 1px solid #305040e0;
 }
 
 .square2 p {
   font-size: 7.5vw;
   text-align: center;
+  line-height: 13vw;
+}
+
+/* タイマー */
+.square5 {
+  width: 80vw;
+  height: 20vw;
+  margin-left: 5%;
+  background-color: #1c382ae0;
+  border-radius: 0;
+  border: 2px solid #14271de0;
 }
 
 /* スタート */
@@ -57,17 +72,13 @@
   height: 16vw;
   background-color: #4d8067e0;
   border-radius: 10px; /* 角を丸める */
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-105%, 50%);
   border: 1px solid #305040e0;
 }
 
 .square3 p {
   font-size: 6.5vw;
   text-align: center;
-  margin: 10px;
+  line-height: 16vw;
 }
 
 /* ストップ */
@@ -76,28 +87,12 @@
   height: 16vw;
   background-color: #4d8067e0;
   border-radius: 10px;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-4%, 50%);
   border: 1px solid #305040e0;
 }
 
 .square4 p {
   font-size: 6.5vw;
   text-align: center;
-  margin: 10px;
+  line-height: 16vw;
 }
 
-/* タイマー */
-.square5 {
-  width: 80vw;
-  height: 20vw;
-  background-color: #1c382ae0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -70%);
-  border-radius: 0;
-  border: 2px solid #14271de0;
-}
