@@ -141,5 +141,6 @@ input[type="password"]:focus {
 }
 
 footer{
-  margin-top: 15vw;
+  position: absolute;/*←絶対位置*/
+  bottom: 4vw; /*下に固定*/
 }

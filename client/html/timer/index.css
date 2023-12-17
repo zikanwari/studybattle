@@ -1,8 +1,8 @@
 #container {
   display: grid; /* 縦のみ */
-  gap: 10VW;/*要素同士の間*/
-  grid-template-rows: 17VW 13VW 20VW 16VW 1fr ;
-  grid-template-columns:  auto ;
+  gap: 10vh;/*要素同士の間*/
+  grid-template-rows:  1fr 1fr 1fr 0.1fr    ;
+  grid-template-columns:    auto ;
 }
 .flex_test-box {
   display: flex;/* 横並び */
@@ -33,6 +33,9 @@
   background-color: #4d8067e0;
   border-radius: 10px; /* 角を丸める */
   border: 1px solid #305040e0;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+
 }
 
 .square1 p {
@@ -60,7 +63,6 @@
 .square5 {
   width: 80vw;
   height: 20vw;
-  margin-left: 5%;
   background-color: #1c382ae0;
   border-radius: 0;
   border: 2px solid #14271de0;
