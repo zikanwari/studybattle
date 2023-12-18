@@ -1,3 +1,8 @@
+#container {
+  display: grid; /* 縦のみ */
+  grid-template-rows:  0.1fr 0.75fr 0.1fr 0.75fr 0.1fr 0.75fr 1fr   ;
+  grid-template-columns:    auto ;
+}
 /*最高順位*/
 .square1  {
   width: 32vw; 
@@ -11,7 +16,7 @@
   text-align: center;
 }
 .square4 {
-  width: 80vw; 
+  width: 90%;
   height: 16vw; 
   background-color:  #f8f8f8e0;
   border: 1px solid #c7c7c7;
@@ -30,7 +35,7 @@
   text-align: center;
 }
 .square5 {
-  width: 80vw; 
+  width: 90%;
   height: 16vw; 
   background-color:  #f8f8f8e0;
   border: 1px solid #c7c7c7;
@@ -39,7 +44,7 @@
 
   /*総合勉強時間*/
 .square3  {
-  width: 32vw; 
+  width: 32vw;
   height: 4vw; 
   background-color: #4d8067e0; 
   border-radius: 10px; /* 角を丸める */
@@ -50,7 +55,7 @@
   text-align: center;
 }
 .square6 {
-  width: 80vw; 
+  width: 90%;
   height: 16vw; 
   background-color:  #f8f8f8e0;
   border: 1px solid #c7c7c7;
@@ -64,7 +69,6 @@
   border-collapse: separate;
   border-spacing: 20px;
   border-radius: 10px;
-  margin-top: 70vw;
 }
 
 /* テーブルの各行のスタイル */
@@ -140,7 +144,4 @@ input[type="password"]:focus {
   display: block;
 }
 
-footer{
-  position: absolute;/*←絶対位置*/
-  bottom: 4vw; /*下に固定*/
-}
+
