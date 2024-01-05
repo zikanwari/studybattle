@@ -1,7 +1,7 @@
 #container {
   display: grid; /* 縦のみ */
-  gap: 1vh;/*要素同士の間*/
-  grid-template-rows:  0.8fr 1fr 1fr 1fr 1fr 1fr  ;
+  gap: 3vh;/*要素同士の間*/
+  grid-template-rows:  auto  ;
   grid-template-columns:    auto ;
 }
 .flex_test-box {

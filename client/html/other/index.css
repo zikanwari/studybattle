@@ -1,6 +1,6 @@
 #container {
   display: grid; /* 縦のみ */
-  grid-template-rows:  0.1fr 0.6fr 0.1fr 0.6fr 0.1fr 0.6fr 1fr   ;
+  grid-template-rows:  0.1fr 0.4fr 0.1fr 0.4fr 0.1fr 0.4fr 1fr   ;
   grid-template-columns:    auto ;
 }
 
@@ -12,7 +12,6 @@
 /*最高順位*/
 .square1  {
   width: 32vw; 
-  height: 4vw; 
   background-color: #4d8067e0; 
   border-radius: 10px; /* 角を丸める */
   border: 1px solid #c7c7c7;
@@ -31,7 +30,6 @@
   /*今週の勉強時間*/
 .square2  {
   width: 32vw;
-  height: 4vw; 
   background-color: #4d8067e0; 
   border-radius: 10px; /* 角を丸める */
   border: 1px solid #375a49e0; 
@@ -51,7 +49,6 @@
   /*総合勉強時間*/
 .square3  {
   width: 32vw;
-  height: 4vw; 
   background-color: #4d8067e0; 
   border-radius: 10px; /* 角を丸める */
   border: 1px solid #375a49e0; 
