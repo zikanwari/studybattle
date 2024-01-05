@@ -11,9 +11,8 @@
 
 /* ミニゲーム */
 .circle {
-  width: 300px;
-  width: 17vmin;
-  height: 17vmin;
+  width: 19%;
+  height: 19%;
   background-color: #82afa1;
   border-radius: 50%;
   margin-left: 70vw;
@@ -28,12 +27,12 @@
 
 /* 家 */
 .square1 {
-  width: 32vmin;
-  height: 13vmin;
+  width: 36%;
+  height: 91%;
   background-color: #4d8067e0;
   border-radius: 10px; /* 角を丸める */
   border: 1px solid #305040e0;
-
+  margin-right: 10px;
 }
 
 .square1 p {
@@ -44,8 +43,8 @@
 
 /* 通学中 */
 .square2 {
-  width: 32vmin;
-  height: 13vmin;
+  width: 36%;
+  height: 91%;
   background-color: #4d8067e0;
   border-radius: 10px; /* 角を丸める */
   border: 1px solid #305040e0;
@@ -73,6 +72,7 @@
   background-color: #4d8067e0;
   border-radius: 10px; /* 角を丸める */
   border: 1px solid #305040e0;
+  margin-right: 10px;
 }
 
 .square3 p {
@@ -95,4 +95,61 @@
   text-align: center;
   line-height: 16vw;
 }
+
+body {
+  background-color: #cde4d9;
+  height: 100vh;
+  overflow: hidden;
+  }
+
+a {
+  text-decoration: none; /* 下線を消す */
+  color: inherit; 
+}
+  
+main {
+  background-color: #cde4d9;
+  width: 90%; 
+  max-height: 90%; 
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-top: 2vh;
+  margin-bottom: 30px;
+  padding: 2%;
+  overflow: auto;
+}
+  
+p {
+  margin: 0;
+  color: rgb(216, 216, 216);
+  font-family: 'Noto Sans JP', sans-serif;
+}
+  
+footer {
+  width: 95%;
+  margin: 1vh auto 0;
+  margin-top: auto;
+}
+
+
+
+  
+footer > div {
+  margin: 1%;
+  float: left;
+  height: 100%;
+  width: 31%;
+  background-color: #669d8c;
+  padding-top: 3vh;
+  padding-bottom: 1vh;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 5vw;
+  color: #b0bec5;
+}
+  
+footer > div > img {
+  width: 5vh;
+}
+
 
