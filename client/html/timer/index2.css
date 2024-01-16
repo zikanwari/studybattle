@@ -1,7 +1,7 @@
 #container {
   display: grid; /* 縦のみ */
-  gap: 8vh;/*要素同士の間*/
-  grid-template-rows:  0.7fr 1fr 0.8fr   ;
+  gap: 8VW;/*要素同士の間*/
+  grid-template-rows:  0.5fr 1fr 0.5fr   ;
   grid-template-columns:    auto ;
 }
 .flex_test-box {
@@ -11,24 +11,24 @@
 
 /* ミニゲーム */
 .circle {
-  width: 19%;
-  height: 19%;
+  width: 14vw;
+  height: 14vw;
   background-color: #82afa1;
   border-radius: 50%;
   margin-left: 70vw;
   border: 0.5px solid #5b776e; /* 縁取りの色と太さを指定 */
 }
 #circleText {
-  font-size: 3vmin;
+  font-size: 2.5vw;
   font-weight: bold;
   text-align: center;
-  line-height: 17vmin;
+  line-height: 13vmin;
 }
 
 /* 家 */
 .square1 {
-  width: 36%;
-  height: 91%;
+  width: 30vw;
+  height: 12vw;
   background-color: #4d8067e0;
   border-radius: 10px; /* 角を丸める */
   border: 1px solid #305040e0;
@@ -36,22 +36,22 @@
 }
 
 .square1 p {
-  font-size: 7.5vmin;
+  font-size: 7vmin;
   text-align: center;
   line-height: 13vmin;
 }
 
 /* 通学中 */
 .square2 {
-  width: 36%;
-  height: 91%;
+  width: 30vw;
+  height: 12vw;
   background-color: #4d8067e0;
   border-radius: 10px; /* 角を丸める */
   border: 1px solid #305040e0;
 }
 
 .square2 p {
-  font-size: 7.5vmin;
+  font-size: 7vmin;
   text-align: center;
   line-height: 13vmin;
 }
@@ -59,7 +59,7 @@
 /* タイマー */
 .square5 {
   width: 80vw;
-  height: 20vw;
+  height: 24vw;
   background-color: #1c382ae0;
   border-radius: 0;
   border: 2px solid #14271de0;
@@ -68,7 +68,7 @@
 /* スタート */
 .square3 {
   width: 32vw;
-  height: 16vw;
+  height: 15vw;
   background-color: #4d8067e0;
   border-radius: 10px; /* 角を丸める */
   border: 1px solid #305040e0;
@@ -84,7 +84,7 @@
 /* ストップ */
 .square4 {
   width: 32vw;
-  height: 16vw;
+  height: 15Vw;
   background-color: #4d8067e0;
   border-radius: 10px;
   border: 1px solid #305040e0;

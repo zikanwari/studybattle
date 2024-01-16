@@ -1,7 +1,7 @@
 #container {
   display: grid; /* 縦のみ */
-  gap: 8vh;/*要素同士の間*/
-  grid-template-rows:  0.7fr 1fr 0.8fr   ;
+  gap: 12VW;/*要素同士の間*/
+  grid-template-rows:  0.5fr 1fr 0.5fr   ;
   grid-template-columns:    auto ;
 }
 .flex_test-box {
@@ -59,7 +59,7 @@
 /* タイマー */
 .square5 {
   width: 80vw;
-  height: 20vw;
+  height: 28vw;
   background-color: #1c382ae0;
   border-radius: 0;
   border: 2px solid #14271de0;
