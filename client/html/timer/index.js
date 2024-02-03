@@ -57,7 +57,7 @@ function whiledata() {
           a = data.split(',');
           if (a[0] == "error") {
               if (a[1] == "user not found") {
-                console.log('user not found');
+                console.log('[timer.js] user not found');
               }
               document.getElementById('time').innerText = 'error';
               return;

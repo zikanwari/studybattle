@@ -39,19 +39,24 @@ function changetodo() {
     });
 }
 
-document.getElementById("other").onclick = function() {
-    changeother();
-    console.log('other');
-}
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("other").onclick = function() {
+        console.log("otherclieked");
+        changeother();
+        console.log('other');
+    }
 
-document.getElementById("ranking").onclick = function() {
-    changetodo();
-    console.log('todo');
-}
+    document.getElementById("ranking").onclick = function() {
+        console.log("tankingclieked");
+        changetodo();
+        console.log('todo');
+    }
 
-document.getElementById("timer").onclick = function() {
-    document.getElementById("other").classList.remove("select");
-    document.getElementById("ranking").classList.remove("select");
-    changetime();
-    console.log('timer');
-}
+    document.getElementById("timer").onclick = function() {
+        console.log("timerclieked");
+        document.getElementById("other").classList.remove("select");
+        document.getElementById("ranking").classList.remove("select");
+        changetime();
+        console.log('timer');
+    }
+});
