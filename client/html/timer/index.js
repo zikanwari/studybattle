@@ -32,7 +32,7 @@ function syncdata() {
 
       var score = document.getElementById('time').innerText.match(/\d{2}(?=:)/)[0];
 
-      fetch(`https://api.launchpencil.f5.si/studybattle/stop?username=` + username, {
+      fetch(`https://api.launchpencil.f5.si/studybattle/stop?username=` + username + `&score=` + score, {
         //mode: 'cors'
       })
       .then(response => response.text())
