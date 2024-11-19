@@ -32,3 +32,6 @@ footer > div {
 body {
   background-color: #cde4d9;
 }
+footer > div > img {
+  width: 5vh;
+}
