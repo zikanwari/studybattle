@@ -15,3 +15,20 @@
   /* デスクトップ用スタイル */
   /* @media (min-width: 1024px) {
 } */
+footer > div {
+  margin: 1%;
+  float: left;
+  height: 100%;
+  width: 31%;
+  background-color: #669d8c;
+  padding-top: 3vh;
+  padding-bottom: 1vh;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 3vw;
+  color: #b0bec5;
+}
+
+body {
+  background-color: #cde4d9;
+}
